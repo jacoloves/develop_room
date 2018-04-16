@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>sample003</title>
+        <script type="text/javascript">
+            function Calc(){
+                var a;
+                var b;
+                var c;
+                
+                a = document.form1.txtA.value;
+                b = document.form1.txtB.value;
+                c = parseInt(a)+parseInt(b);
+                
+                document.form1.txtC.value = c;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+            <input type="text" name="txtA">+
+            <input type="text" name="txtB">=
+            <input type="text" name="txtC">
+            <br>
+            <input type="button" name="cmdCalc" value="計算" onclick="Calc()">
+        </form>
+    </body>
+</html>
