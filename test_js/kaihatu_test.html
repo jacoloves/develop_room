@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>勤怠表（テスト）</title>
+        <script type="text/javascript">
+            var sum;
+            var sum2;
+            function test(){
+                
+                var now;
+                var hour;
+                var min;
+                
+                now = new Date();
+                hour = now.getHours();
+                min = now.getMinutes();
+                sum = hour + ':' + min;
+                
+                document.form1.text_txt.value = sum;
+            }
+            
+            function test2(){
+                
+                var now;
+                var hour;
+                var min;
+                
+                now = new Date();
+                hour = now.getHours();
+                min = now.getMinutes();
+                sum2 = hour + ':' + min;
+                
+                document.form1.text_txt2.value = sum2;
+            }
+             
+        </script>
+    </head>
+    <body>
+        <h1>取りあえずテストページ</h1>
+        <form name="form1">
+            出勤：
+            <input type="text" name="text_txt">
+            <br>
+            退勤：
+            <input type="text" name="text_txt2">
+            <p></p>
+            <input type="button" value="出勤" onclick="test()">
+            <br>
+            <input type="button" value="退勤" onclick="test2()">
+            <br>
+        </form>
+    </body>
+</html>
