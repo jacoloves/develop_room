@@ -1,0 +1,55 @@
+<html>
+   <head>
+       <script type="text/javascript">
+            function Calc(){
+                var a;
+                var b;
+                var c;
+                var ope;
+                
+                with(document.form1){
+                    a = parseInt(txtA.value);
+                    b = parseInt(txtB.value);
+                    ope = parseInt(selOpe.value);
+                }
+                
+                switch(ope){
+                    case 1:
+                        c = a+b;
+                        break;
+                    case 2:
+                        c = a-b;
+                        break;
+                    case 3:
+                        c = a*b;
+                        break;
+                    case 4:
+                        c = a/b;
+                        break;
+                    case 5:
+                        c = a%b;
+                        break;
+                }
+                
+                document.form1.txtC.value = c;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+            <input type="text" name="txtA">
+            <select name="selOpe" size=1>
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">×</option>
+                <option value="4">÷</option>
+                <option value="5">%</option>
+            </select>
+            <input type="text" name="txtB">
+            <input type="text" name="txtC">
+            <br>
+            <input type="button" name="cmdCalc" value="計算" onclick="Calc()">
+            <input type="reset" value="クリア">
+        </form>
+    </body>
+</html>
